@@ -10,10 +10,13 @@ class LoginScreen extends StatelessWidget {
         child: ElevatedButton.icon(
           onPressed: () {},
           label: const Text("Sign In with Google"),
-          icon: Image.asset("assets/glogo.png"),
+          icon: Image.asset(
+            "assets/glogo.png",
+            width: 15,
+            height: 15,
+          ),
         ),
       ),
     );
   }
 }
-
