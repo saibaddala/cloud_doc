@@ -7,13 +7,7 @@ class GoogleAuth {
       : _googleSignIn = googleSignIn;
 
   void signInWithGoogle() async {
-    try {
-      final user = await _googleSignIn. signInSilently();
-      if (user != null) {
-        print(user.email);
-      }
-    } catch (e) {
-      print(e.toString());
-    }
+    final user = await _googleSignIn.signInSilently();
+    if (user != null) {}
   }
 }
