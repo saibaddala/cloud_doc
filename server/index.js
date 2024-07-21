@@ -9,10 +9,10 @@ app.use(express.json());
 app.use(authRouter);
 app.use(cors);
 
-const PORT = process.env.PORT | 3001;
+const PORT = process.env.PORT | 8000;
 const DB = "mongodb+srv://saibaddala:buntusai172@cluster0.3c73wrb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-app.listen(PORT, "0.0.0.0", () => {
+app.listen(PORT, "127.0.0.1", () => {
     console.log(`Connected to port ${PORT}`);
 });
 

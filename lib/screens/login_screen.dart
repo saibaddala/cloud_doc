@@ -12,7 +12,6 @@ class LoginScreen extends ConsumerWidget {
     final response = await ref.read(authProvider).signInWithGoogle();
 
     if (response.errorMsg == null) {
-      print("successssssssssssssss");
       ref.read(userProvider.notifier).update((state) => response.data);
       navigator.push(
         MaterialPageRoute(
