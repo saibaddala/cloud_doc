@@ -26,7 +26,7 @@ class GoogleAuth {
           token: '',
         );
 
-        var res = await _client.post(Uri.parse('$emulatorHost/api/signup'),
+        var res = await _client.post(Uri.parse('$webHost/api/signup'),
             body: userAcc.toJson(),
             headers: {
               'Content-Type': 'application/json; charset=UTF-8',

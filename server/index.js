@@ -9,10 +9,14 @@ app.use(express.json());
 app.use(authRouter);
 app.use(cors);
 
-const PORT = process.env.PORT | 8000;
+const listeningIP = "0.0.0.0";
+const webPORT = 3001;
+const emulatorPORT = 8000;
+
+const PORT = process.env.PORT | webPORT;
 const DB = "mongodb+srv://saibaddala:buntusai172@cluster0.3c73wrb.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
 
-app.listen(PORT, "127.0.0.1", () => {
+app.listen(PORT, listeningIP, () => {
     console.log(`Connected to port ${PORT}`);
 });
 
